@@ -4,7 +4,7 @@ package practico3pilaycola.utils;
 
 public class Stack<AnyType> {
     private Integer index; //Indice
-    private Integer size; //Tamaño del arreglo
+    public Integer size; //Tamaño del arreglo
     private AnyType array[]; //Arreglo
     
     public Stack(Integer size) {
@@ -14,10 +14,6 @@ public class Stack<AnyType> {
     }
     
     public void push(AnyType item) { //Se añade un elemento de lo q sea (AnyType) a la pila siempre y cuando no esté llena.
-        if(isFull())
-        {
-            throw new IllegalStateException("La pila está llena");
-        }
         this.array[this.index] = item;
         this.index++;
     }
