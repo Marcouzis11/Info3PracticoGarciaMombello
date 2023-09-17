@@ -29,7 +29,6 @@ public class Palindromo {
             pila.push(arregloStr[i]);
         }
 
-
         if(size%2 == 1)
         {
             for(int i = size/2 + 1; i<size; i++)
