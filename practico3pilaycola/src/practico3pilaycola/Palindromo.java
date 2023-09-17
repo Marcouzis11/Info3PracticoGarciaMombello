@@ -12,7 +12,6 @@ public class Palindromo {
         String str = consola.nextLine();
         int palindromizacion = 0;
         
-       
         System.out.println("Palabra seleccionada:" + str);
         str = str.replaceAll("\\s","");
         System.out.println("Palabra sin espacios:" + str);
@@ -30,7 +29,6 @@ public class Palindromo {
             pila.push(arregloStr[i]);
         }
 
-      
 
         if(size%2 == 1)
         {
