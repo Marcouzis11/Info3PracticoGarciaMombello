@@ -26,6 +26,6 @@ public class testCola {
         colita.dequeue();
         System.out.println("3: " +colita.getFront());
         colita.dequeue();
-        System.out.println("4: " +colita.getFront()); //holaaaaaa
+        System.out.println("4: " +colita.getFront()); //holaaaaaaaaaa
     }
 }
