@@ -5,7 +5,7 @@ public class pila<AnyType> {
     public nodo<AnyType> topOfStack;
 
 
-    pila()
+    public pila()
     {
         this.topOfStack = null;
     }
