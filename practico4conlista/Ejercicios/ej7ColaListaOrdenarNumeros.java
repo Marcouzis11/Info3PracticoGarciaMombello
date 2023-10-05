@@ -1,31 +1,56 @@
 package practico4conlista.Ejercicios;
 import practico4conlista.utils.cola;
+import practico4conlista.utils.pila;
 import java.util.Scanner;
 public class ej7ColaListaOrdenarNumeros {
     public static void main(String[] args) {
         cola cola = new cola();
-        cola.enqueue(1);
-        cola.enqueue(3);
-        cola.enqueue(2);
-        cola.enqueue(7);
-        cola.enqueue(6);
-        cola.enqueue(8);
-        int x = 6;
-        int temp = 0;
+        Scanner consola = new Scanner(System.in);
+        int opcion = 0;
+        int dato;
+        int tamaño = 0;
 
-        
-        for(int i = 0; i<20; i++)
+        do
         {
-            if((int)cola.front.elemento <= (int)cola.front.next.elemento)
+            System.out.println("Ingrese: \n 0-Cerrar \n 1-Volver a ingresar dato");
+            opcion = consola.nextInt();
+            switch(opcion)
             {
-                System.out.println(cola.dequeue());
+                case 1:
+                    System.out.println("Dato: ");
+                    dato = consola.nextInt();
+                    cola.enqueue(dato);
+                    tamaño++;
+                    break;
             }
-            else
+        }while(opcion != 0);
+
+        int [] array = new int[tamaño];
+        for(int i = 0; i<tamaño; i++)
+        {
+            array[i] = (int) cola.dequeue();
+        }
+
+        for (int p = 1; p<array.length; p++)
+        {
+            Integer temp = array[p];
+            int j = p;
+            for( ; j > 0 && temp.compareTo(array[j-1]) < 0 ; j-- )
             {
-                temp = (int) cola.getFront();
-                cola.front.elemento = cola.front.next.elemento;
-                cola.front.next.elemento = temp;
+                array[j] = array[j-1];
             }
+            array[j] = temp;
+        }
+
+        for(int j=0; j<array.length;j++)
+        {
+            cola.enqueue(array[j]);
+        }
+
+        System.out.println("Cola ordenada:");
+        while(cola.isEmpty() != true)
+        {
+            System.out.println(cola.dequeue());
         }
     }
 }
