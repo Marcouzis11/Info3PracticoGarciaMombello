@@ -15,6 +15,12 @@ public class arbol<AnyType> {
         root = new nodo<AnyType>(rootItem, null, null);
     }
 
+    public void dtree(AnyType buscar)
+    {
+        root.dtree(root, buscar);
+        printInOrder();
+    }
+
     public nodo<AnyType> getRoot()
     {
         return root;

@@ -176,4 +176,34 @@ public class nodo<AnyType> {
         if(right!=null)
             right.printInOrder();
     }
+
+    public void dtree(nodo nodo, AnyType buscar)
+    {
+        if(nodo == null)
+        {
+            throw new IllegalStateException("El elemento a eliminar no se encuentra en el arbol");
+        }
+        else
+        {
+            if(buscar == nodo.element)
+            {
+                nodo.element = null;
+            }
+            else
+            {
+                if((int) buscar > (int) nodo.element)
+                {
+                    dtree(nodo.right,buscar);
+                }
+                else
+                {
+                    if((int) buscar < (int) nodo.element)
+                    {
+                        dtree(nodo.left,buscar);
+                    }
+                }
+            }
+        }
+        
+    }
 }
