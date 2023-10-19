@@ -1,5 +1,7 @@
 package practico5ab.utils;
 
+import practico4conlista.utils.nodo;
+
 public class nodo<AnyType> {
     
     public AnyType element;
@@ -22,7 +24,7 @@ public class nodo<AnyType> {
 
     public void insert(AnyType elemento) //No permite insertar valores repetidos, los repetidos son ignorados
     {
-        if((int) elemento < (int) element)
+        if( (int) elemento < (int) element)
         {
             if(this.left == null)
             {
@@ -179,15 +181,22 @@ public class nodo<AnyType> {
 
     public void dtree(nodo nodo, AnyType buscar)
     {
-        if(nodo == null)
+        if(nodo.left == null && nodo.right == null)
         {
             throw new IllegalStateException("El elemento a eliminar no se encuentra en el arbol");
         }
         else
         {
-            if(buscar == nodo.element)
+            if(buscar == nodo.left.element || buscar == nodo.right.element)
             {
-                nodo.element = null;
+                if(nodo.left == null && nodo.right == null)
+                {
+                     
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -206,4 +215,37 @@ public class nodo<AnyType> {
         }
         
     }
+
+    public nodo dtreee(nodo nodo, AnyType buscar)
+    {
+        /*if(nodo.left.left == null && nodo.left.right == null && nodo.right.left == null && nodo.right.right == null)
+        {
+            if(nodo.left.element == buscar)
+            {
+                nodo.left = null;
+            }
+            if(nodo.right.element == buscar)
+            {
+                nodo.right = null;
+            }
+        }
+
+        if((nodo.left.left != null && nodo.left.right == null)
+            ||
+            (nodo.left.left == null && nodo.left.right != null)
+            ||
+            (nodo.right.left != null && nodo.right.right == null)
+            ||
+            (nodo.right.right != null && nodo.right.left == null))
+        {
+            if()
+        }
+        */
+        if(nodo == null)
+        {
+            
+        }
+    }
 }
+
+    
