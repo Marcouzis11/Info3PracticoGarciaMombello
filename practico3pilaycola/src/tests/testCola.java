@@ -17,7 +17,7 @@ public class testCola {
         System.out.println(colita.getFront());*/
         Cola cola = new Cola(5);
         cola = colita; //!No se puede realizar esto pq se copian las mismas direcciones de memoria y por lo tanto 2 colas distintas son iguales */
-
+//hola
         System.out.println("Colita dequeue= "+colita.dequeue());
         System.out.println("Colita dequeue2= "+colita.dequeue());
         colita.enqueue(3);
