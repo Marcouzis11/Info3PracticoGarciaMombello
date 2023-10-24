@@ -15,12 +15,6 @@ public class arbol<AnyType> {
         root = new nodo<AnyType>(rootItem, null, null);
     }
 
-    public void dtree(AnyType buscar)
-    {
-        root.dtree(root, buscar);
-        printInOrder();
-    }
-
     public nodo<AnyType> getRoot()
     {
         return root;
@@ -87,6 +81,35 @@ public class arbol<AnyType> {
     public void insertRep(AnyType elemento)
     {
         root.insertRep(elemento);
+    }
+
+    public  nodo eliminarRec(nodo root, int valor) {
+        if (root == null) {
+            return root;
+        }
+        if ((int)valor < (int)root.element) {
+            root.left = eliminarRec(root.left, valor);
+        } else if ((int)valor > (int)root.element) {
+            root.right = eliminarRec(root.right, valor);
+        } else {
+            if (root.left == null) {
+                return root.right;
+            } else if (root.right == null) {
+                return root.left;
+            }
+            root.element = encontrarMinimoValor(root.right);
+            root.right = eliminarRec(root.right, (int)root.element);
+        }
+        return root;
+    }
+
+    int encontrarMinimoValor(nodo root) {
+        int minimoValor = (int) root.element;
+        while (root.left != null) {
+            minimoValor = (int) root.left.element;
+            root = root.left;
+        }
+        return minimoValor;
     }
 
 

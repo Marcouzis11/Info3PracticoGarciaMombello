@@ -17,6 +17,7 @@ public class ejercicio5 {
         System.out.println("Antes de eliminar un elemento: ");
         arbol.printInOrder();
         System.out.println("Luego de eliminar un elemento: ");
-        arbol.dtree(10);
+        arbol.eliminarRec(arbol.root,8);
+        arbol.printInOrder();
     }
 }

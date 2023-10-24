@@ -1,6 +1,5 @@
 package practico5ab.utils;
 
-import practico4conlista.utils.nodo;
 
 public class nodo<AnyType> {
     
@@ -177,75 +176,8 @@ public class nodo<AnyType> {
         System.out.println(element);
         if(right!=null)
             right.printInOrder();
-    }
+    } 
 
-    public void dtree(nodo nodo, AnyType buscar)
-    {
-        if(nodo.left == null && nodo.right == null)
-        {
-            throw new IllegalStateException("El elemento a eliminar no se encuentra en el arbol");
-        }
-        else
-        {
-            if(buscar == nodo.left.element || buscar == nodo.right.element)
-            {
-                if(nodo.left == null && nodo.right == null)
-                {
-                     
-                }
-                else
-                {
-
-                }
-            }
-            else
-            {
-                if((int) buscar > (int) nodo.element)
-                {
-                    dtree(nodo.right,buscar);
-                }
-                else
-                {
-                    if((int) buscar < (int) nodo.element)
-                    {
-                        dtree(nodo.left,buscar);
-                    }
-                }
-            }
-        }
-        
-    }
-
-    public nodo dtreee(nodo nodo, AnyType buscar)
-    {
-        /*if(nodo.left.left == null && nodo.left.right == null && nodo.right.left == null && nodo.right.right == null)
-        {
-            if(nodo.left.element == buscar)
-            {
-                nodo.left = null;
-            }
-            if(nodo.right.element == buscar)
-            {
-                nodo.right = null;
-            }
-        }
-
-        if((nodo.left.left != null && nodo.left.right == null)
-            ||
-            (nodo.left.left == null && nodo.left.right != null)
-            ||
-            (nodo.right.left != null && nodo.right.right == null)
-            ||
-            (nodo.right.right != null && nodo.right.left == null))
-        {
-            if()
-        }
-        */
-        if(nodo == null)
-        {
-            
-        }
-    }
 }
 
     
