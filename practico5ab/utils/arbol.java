@@ -52,6 +52,35 @@ public class arbol<AnyType> {
             root.printInOrder();
     }
 
+    public void imprimirFormaArbol(nodo root, int nivel) {
+        if (root == null) {
+            return;
+        }
+
+        imprimirFormaArbol(root.right, nivel + 1);
+
+        for (int i = 0; i < nivel; i++) {
+            System.out.print("   "); // Espacios para representar el nivel
+        }
+        System.out.println(root.element); // Imprimir el valor del nodo
+
+        imprimirFormaArbol(root.left, nivel + 1);
+    }
+
+    public void imprimirArbolillo(nodo<AnyType> root, int altura)
+    {
+        int nivel = root.height(root);
+        for(int i = 0; i<nivel; i++)
+        {
+            System.out.print("    ");
+        }
+        if(root == null)
+        {
+            return;
+        }
+        
+    }
+
     public void printPostOrder()
     {
         if(root != null)

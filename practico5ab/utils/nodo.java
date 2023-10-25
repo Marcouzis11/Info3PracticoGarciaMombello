@@ -172,11 +172,19 @@ public class nodo<AnyType> {
     public void printInOrder()
     {
         if(left != null)
+        {
+            System.out.println("\t");
             left.printInOrder();
-        System.out.println(element);
+        }
+        System.out.println("\t" + element);
         if(right!=null)
+        {
+            System.out.println("\t");
             right.printInOrder();
+        }
     } 
+
+    
 
 }
 
