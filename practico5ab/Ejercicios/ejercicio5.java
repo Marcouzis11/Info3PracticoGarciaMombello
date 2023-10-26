@@ -15,7 +15,7 @@ public class ejercicio5 {
         arbol.insert(9);
         arbol.insert(10);
         System.out.println("Antes de eliminar un elemento: ");
-        arbol.imprimirArbolillo(arbol.root, arbol.height());
+        arbol.imprimirEntreConNivel(arbol.root, 0);
         //arbol.printInOrder();
         /*System.out.println("Luego de eliminar un elemento: ");
         arbol.eliminarRec(arbol.root,8);

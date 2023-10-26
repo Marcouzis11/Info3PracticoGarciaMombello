@@ -147,4 +147,10 @@ public class Arbol {
         y.right = x;
         x.father = y;
     }
+
+    // Visualizacion del arbol
+    public void mostrarArbol(Nodo root)
+    {
+        
+    }
 }
