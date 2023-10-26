@@ -1,7 +1,7 @@
 
-package tests;
+package practico3pilaycola.tests;
 
-import practico3pilaycola.utils.Stack;
+import practico3pilaycola.practico3pilaycola.utils.Stack;
 
 public class testPila {
     public static void main(String[] args) {

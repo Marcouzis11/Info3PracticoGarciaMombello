@@ -1,6 +1,6 @@
-package tests;
+package practico3pilaycola.tests;
 
-import practico3pilaycola.utils.Cola;
+import practico3pilaycola.practico3pilaycola.utils.Cola;
 
 public class testCola {
 
