@@ -10,7 +10,7 @@ public class abAvl<AnyType> {
 
     abAvl(AnyType element) //Creacion del arbol con root y element.
     {
-        root = new nodoAvl<AnyType>(element);
+        root = new nodoAvl<AnyType>(element,null,null);
     }
 
     public void printInOrder()
@@ -44,9 +44,9 @@ public class abAvl<AnyType> {
 
         if( (int) element < (int) root.element)
         {
-            if(this.root.left == null)
+            if(root.left == null)
             {
-                this.root.left = new nodoAvl(element,null,null);
+                root.left = new nodoAvl(element,null,null);
             }
             else
             {
@@ -57,9 +57,9 @@ public class abAvl<AnyType> {
         {
             if((int) element > (int) root.element)
             {
-                if(this.root.right == null)
+                if(root.right == null)
                 {
-                    this.root.right = new nodoAvl(element,null,null);
+                    root.right = new nodoAvl(element,null,null);
                 }
                 else
                 {
