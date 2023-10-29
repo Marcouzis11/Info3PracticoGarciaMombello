@@ -1,5 +1,5 @@
 
-package Ejercicios;
+package practico1recursividad.ejercicios;
 
 
 public class Metodos {

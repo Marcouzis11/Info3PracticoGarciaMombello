@@ -1,5 +1,5 @@
 
-package ordenamientos;
+package practico2ordenamiento;
 
 
 import java.util.Random;

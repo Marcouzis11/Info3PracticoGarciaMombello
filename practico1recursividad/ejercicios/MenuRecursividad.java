@@ -1,5 +1,5 @@
 
-package Ejercicios;
+package practico1recursividad.ejercicios;
 
 
 import java.util.Scanner;
