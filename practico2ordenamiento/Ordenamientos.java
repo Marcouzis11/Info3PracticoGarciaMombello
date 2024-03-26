@@ -57,17 +57,17 @@ public class Ordenamientos {
                     int gap, i, j, temp;
                     for (gap=n/2; gap > 0; gap /= 2)
                         for ( i = gap; i < n; i++)
-                           for ( j=i-gap; j>=0 && randomArray [j] > randomArray [j+gap]; j-=gap) 
-                           {
+                            for ( j=i-gap; j>=0 && randomArray [j] > randomArray [j+gap]; j-=gap) 
+                            {
                                 temp = randomArray[j];
                                 randomArray [j] = randomArray [j+gap];
                                 randomArray [j+gap] = temp;
-                           }
-                           endTime = System.nanoTime(); // Finaliza el tiempo
+                            }
+                            endTime = System.nanoTime(); // Finaliza el tiempo
                     
                     elapsedTimeMillis = (endTime - startTime) / 1000000;
                     System.out.println("Tiempo transcurrido: " + elapsedTimeMillis + " ms");
-                                 
+
                     imprimir(randomArray);
                     break;
                 case 3:
@@ -112,10 +112,10 @@ public class Ordenamientos {
     {
         while ( item [j] > item [i] && j>i) j-- ;
         if ( i<j ) {
-         temp=item[i];
-         item[i] = item[j];
-         item[j] = temp;
-         i++;
+        temp=item[i];
+        item[i] = item[j];
+        item[j] = temp;
+        i++;
         }
         while ( item [i] < item [j] && i<j ) i++ ;
         if ( i<j ) {
